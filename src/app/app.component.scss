@@ -1,0 +1,51 @@
+@import "../styles.scss";
+
+:host {
+  //display: flex;
+  //flex: 1;
+}
+
+h1 {
+  margin: 18px 18px 0 18px;
+  color: $primary;
+  font-size: 36px;
+  font-style: italic;
+  text-shadow: 2px 2px 4px #000000;  /* Text shadow for depth */
+  font-weight: bold;  /* Bold for emphasis */
+  text-transform: uppercase;  /* Uppercase for a different look */
+  letter-spacing: 2px;  /* Increase spacing between letters */
+}
+
+p {
+  margin: 12px;
+}
+
+mat-sidenav {
+  background: aliceblue;
+}
+
+.sidenav-button {
+  display: block;
+  width: 210px;
+  text-align: left;
+}
+
+.active-link {
+  color: $accent !important;
+  border-right: 3px solid $accent;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+::ng-deep .mat-expansion-panel .mat-expansion-panel-body {
+  padding: 0 0 8px 0 !important;
+}
+
+mat-sidenav-container {
+  height: 100vh; /* Full height of the viewport */
+}
+
+mat-sidenav {
+  height: 100%; /* Full height of the parent container */
+  overflow: auto; /* Make the content scrollable */
+}

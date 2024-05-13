@@ -1,0 +1,62 @@
+@import "../../styles.scss";
+
+.container {
+  margin: 18px 35px;
+
+  .header {
+    margin-left: -31px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    h1 {
+      font-weight: 500;
+      margin: 0;
+    }
+  }
+
+  b {
+    font-weight: 500;
+  }
+}
+
+.collection-button {
+  color: white;
+  background: $accent;
+}
+
+.update-button {
+  color: white;
+  background: $primary;
+}
+
+.delete-button {
+  color: white;
+  background: red;
+}
+
+.collection-button, .update-button, .delete-button {
+  margin: 4px;
+}
+
+.table-container {
+  max-height: 500px;
+  width: 100%;
+  overflow: auto;
+
+  table {
+    box-shadow: none;
+  }
+}
+
+select {
+  background-color: #F1F1F1 !important;
+  height: 40px !important;
+  border: none !important;
+  border-radius: 6px !important;
+  padding: 12px;
+
+  &:focus {
+    outline: none;
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "schools": [
+    {
+      "id": 1,
+      "name": "Makini School",
+      "type": "Primary",
+      "product": "Zeraki Analytics",
+      "county": "Nairobi",
+      "registrationDate": "2024-01-01",
+      "contactInformation": "contact@makinischool.com",
+      "balance": 500
+    },
+    {
+      "id": 2,
+      "name": "Brookhouse School",
+      "type": "Secondary",
+      "product": "Zeraki Finance",
+      "county": "Kiambu",
+      "registrationDate": "2024-01-01",
+      "contactInformation": "admin@brookhouse.edu",
+      "balance": 7000
+    }
+  ],
+  "schoolTypes": [
+    "Primary",
+    "Secondary",
+    "IGCSE"
+  ],
+  "signups": {
+    "Zeraki Analytics": {
+      "Primary": 1,
+      "Secondary": 0,
+      "IGCSE": 0,
+      "Total": 1
+    },
+    "Zeraki Finance": {
+      "Primary": 0,
+      "Secondary": 1,
+      "IGCSE": 2,
+      "Total": 3
+    },
+    "Zeraki Timetable": {
+      "Primary": 0,
+      "Secondary": 2,
+      "IGCSE": 0,
+      "Total": 2
+    },
+    "Total": {
+      "Total": 6
+    }
+  },
+  "invoices": [
+    {
+      "id": 1,
+      "schoolId": 1,
+      "schoolName": "Makini School",
+      "invoiceNumber": "INV-001",
+      "invoiceItem": "Zeraki Analytics",
+      "creationDate": "2024-05-01",
+      "dueDate": "2024-07-01",
+      "amount": 1000,
+      "paidAmount": 0,
+      "balance": 1000,
+      "status": "Completed",
+      "daysUntilDue": 47
+    },
+    {
+      "id": 2,
+      "schoolId": 1,
+      "schoolName": "Makini School",
+      "invoiceNumber": "INV-001",
+      "invoiceItem": "Zeraki Analytics",
+      "creationDate": "2024-05-01",
+      "dueDate": "2024-07-01",
+      "amount": 800,
+      "paidAmount": 0,
+      "balance": 1000,
+      "status": "Pending",
+      "daysUntilDue": 47
+    },
+    {
+      "id": 3,
+      "schoolId": 2,
+      "schoolName": "Brookhouse School",
+      "invoiceNumber": "INV-002",
+      "invoiceItem": "Zeraki Finance",
+      "creationDate": "2024-05-01",
+      "dueDate": "2024-07-01",
+      "amount": 8000,
+      "paidAmount": 0,
+      "balance": 8000,
+      "status": "Pending",
+      "daysUntilDue": 47
+    },
+    {
+      "id": 5,
+      "schoolId": 2,
+      "schoolName": "Brookhouse School",
+      "invoiceNumber": "INV-002",
+      "invoiceItem": "Zeraki Finance",
+      "creationDate": "2024-05-01",
+      "dueDate": "2024-07-01",
+      "amount": 6000,
+      "paidAmount": 0,
+      "balance": 8000,
+      "status": "Pending",
+      "daysUntilDue": 47
+    },
+    {
+      "id": 6,
+      "schoolId": 2,
+      "schoolName": "Brookhouse School",
+      "invoiceNumber": "INV-002",
+      "invoiceItem": "Zeraki Finance",
+      "creationDate": "2024-05-01",
+      "dueDate": "2024-07-01",
+      "amount": 8000,
+      "paidAmount": 1000,
+      "balance": 7000,
+      "status": "Pending",
+      "daysUntilDue": 47
+    },
+    {
+      "id": 10,
+      "schoolId": 2,
+      "schoolName": "Brookhouse School",
+      "invoiceNumber": "INV-002",
+      "invoiceItem": "Zeraki Finance",
+      "creationDate": "2024-05-01",
+      "dueDate": "2024-07-01",
+      "amount": 200,
+      "paidAmount": 0,
+      "balance": 8000,
+      "status": "Pending",
+      "daysUntilDue": 47
+    },
+    {
+      "invoiceNumber": "INV-1715749731119",
+      "schoolId": 1,
+      "schoolName": "Makini School",
+      "creationDate": "2024-05-15T05:08:51.119Z",
+      "balance": "150",
+      "paidAmount": 0,
+      "status": "Pending",
+      "daysUntilDue": 42,
+      "invoiceItem": "Zeraki Timetable",
+      "dueDate": "2024-06-27",
+      "amount": "150",
+      "id": 11
+    }
+  ],
+  "collections": [
+    {
+      "schoolId": 2,
+      "invoiceId": 6,
+      "invoiceNumber": "INV-002",
+      "collectionNumber": "COL-1715750645067",
+      "dateOfCollection": "2024-05-15T05:24:05.067Z",
+      "status": "Valid",
+      "amount": "1000",
+      "id": 1
+    }
+  ],
+  "products": [
+    "Zeraki Analytics",
+    "Zeraki Finance",
+    "Zeraki Timetable"
+  ],
+  "revenue": {
+    "Zeraki Analytics": 1000,
+    "Zeraki Finance": 0,
+    "Zeraki Timetable": 0,
+    "Total": 1000
+  },
+  "targets": [
+    {
+      "id": 1,
+      "product": "Zeraki Analytics",
+      "target": 5,
+      "achieved": 1
+    },
+    {
+      "id": 2,
+      "product": "Zeraki Finance",
+      "target": 5,
+      "achieved": 0
+    },
+    {
+      "id": 3,
+      "product": "Zeraki Timetable",
+      "target": 5,
+      "achieved": 0
+    }
+  ]
+}

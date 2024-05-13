@@ -1,0 +1,30 @@
+<mat-sidenav-container>
+  <mat-sidenav mode="side" [opened]="viewportIsWide" #sidenav>
+    <h1>Zeraki</h1>
+    <p>Sales Agent Dashboard</p>
+    <button class="sidenav-button" mat-button
+            (click)="closeSidenavIfNotWide()"
+            routerLink="/dashboard"
+            routerLinkActive="active-link">
+      <mat-icon>dashboard</mat-icon> Dashboard
+    </button>
+    <mat-accordion>
+      <mat-expansion-panel [expanded]="router.url.includes('/schools')">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Schools
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <button *ngFor="let school of schools$ | async" class="sidenav-button" mat-button
+                (click)="closeSidenavIfNotWide()"
+                [routerLink]="['/schools', school.id]"
+                routerLinkActive="active-link">
+          <mat-icon>school</mat-icon> {{ school.name }}
+        </button>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

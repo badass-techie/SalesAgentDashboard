@@ -1,0 +1,65 @@
+@import "../../styles.scss";
+
+.grid-container {
+  margin: 20px;
+
+  .header {
+    margin-left: -16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    h1 {
+      font-weight: 500;
+      margin: 0;
+    }
+  }
+}
+
+.dashboard-card {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+}
+
+.more-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.dashboard-card-content {
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 100%;
+  justify-content: center;
+}
+
+mat-card {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-card-content {
+  overflow: auto;
+}
+
+.table-container {
+  min-height: 360px;
+  width: 100%;
+  overflow: auto;
+
+  table {
+    box-shadow: none;
+  }
+}
+
+.collection-button {
+  color: white;
+  background: $accent;
+}
