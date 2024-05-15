@@ -86,7 +86,8 @@
           </mat-card-title>
         </mat-card-header>
         <mat-card-content class="dashboard-card-content">
-          <canvas baseChart
+          <canvas *ngIf="isBrowser"
+                  baseChart
                   [type]="'pie'"
                   [datasets]="target.pieChartDataSets"
                   [labels]="target.pieChartLabels"
@@ -109,6 +110,7 @@
         </mat-card-header>
         <mat-card-content class="dashboard-card-content">
           <canvas baseChart
+                  *ngIf="isBrowser"
                   [type]="'bar'"
                   [datasets]="signup.data?.barChartData?.datasets"
                   [labels]="signup.data?.barChartLabels"

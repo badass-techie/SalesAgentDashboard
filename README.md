@@ -16,12 +16,15 @@
 ## Screenshots
 
 - Dashboard
+
   ![Dashboard](./screenshots/dashboard.jpg)
 
 - Schools
+
   ![Schools](./screenshots/schools.jpg)
 
 - Dashboard (Mobile)
+
   ![Responsive](./screenshots/responsive.jpg)
 
 ## Technologies Used

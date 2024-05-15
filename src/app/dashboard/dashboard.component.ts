@@ -1,7 +1,7 @@
-import {Component, inject, ViewChild} from '@angular/core';
+import {Component, Inject, inject, PLATFORM_ID, ViewChild} from '@angular/core';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import {map, startWith} from 'rxjs/operators';
-import {AsyncPipe, DatePipe, KeyValuePipe, NgForOf, NgIf} from '@angular/common';
+import {AsyncPipe, DatePipe, isPlatformBrowser, KeyValuePipe, NgForOf, NgIf} from '@angular/common';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
@@ -62,6 +62,7 @@ import {MatSidenav} from "@angular/material/sidenav";
 export class DashboardComponent {
   private breakpointObserver = inject(BreakpointObserver);
   displayedColumns: string[] = ['invoiceNumber', 'schoolName', 'amount', 'dueDate', 'collectPayment'];
+  isBrowser: boolean = false;
 
   cardLayout = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     map(({ matches }) => {
@@ -145,7 +146,8 @@ export class DashboardComponent {
 
   constructor(private dashboardService: DashboardService,
               protected appService: AppService,
-              private dialog: MatDialog) {
+              private dialog: MatDialog,
+              @Inject(PLATFORM_ID) private platformId: Object) {
     this.dashboardService.getCollections().subscribe(collections => {
       this.collections = collections;
     });
@@ -159,6 +161,10 @@ export class DashboardComponent {
     appService.toggleSidenav.subscribe(() => {
       this.sidenav?.toggle();
     });
+  }
+
+  ngOnInit(): void {
+    this.isBrowser = isPlatformBrowser(this.platformId);
   }
 
   getBouncedCheques(): number {
