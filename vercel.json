@@ -9,7 +9,7 @@
       }
     },
     {
-      "src": "dist/**",
+      "src": "dist/sales-agent-dashboard/browser/**",
       "use": "@vercel/static"
     }
   ],
