@@ -1,6 +1,6 @@
 # SalesAgentDashboard
 
-- A responsive sales agent dashboard for an ed-tech platform that facilitates the management of school accounts, invoicing, and collections, including data visualization for targets and sign-ups. 
+- A responsive sales agent dashboard for an ed-tech platform that facilitates the management of school accounts, invoicing, and collections, including data visualization for targets and sign-ups.
 - Utilizes cutting-edge Angular features such as Standalone Components, Signals and SSR.
 - This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
 
@@ -66,4 +66,4 @@ Unit tests have been set up for services with the help of Jest which has builtin
 
 ## Live Demo
 
-Coming soon!
+- [Sales Agent Dashboard](https://sales-agent-dashboard-rho.vercel.app/)

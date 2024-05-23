@@ -89,7 +89,6 @@ export class DashboardComponent {
   collections: Collection[] = [];
   signups: Signup = {};
   revenue: Revenue = {};
-  @ViewChild(MatSidenav) sidenav: MatSidenav | undefined;
   public targetsVisualization = this.dashboardService.getTargets().pipe(
     map((targets: Target[]) => {
       return targets.map(target => {
@@ -156,10 +155,6 @@ export class DashboardComponent {
     });
     this.dashboardService.getRevenue().subscribe(revenue => {
       this.revenue = revenue;
-    });
-
-    appService.toggleSidenav.subscribe(() => {
-      this.sidenav?.toggle();
     });
   }
 
